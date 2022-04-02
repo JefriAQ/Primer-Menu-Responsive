@@ -1,0 +1,113 @@
+ *{
+    font-family: 'Sen' sans-serif;
+    font-weight: 100;
+}
+
+.nav_responsive-ul{
+    display: none;
+}
+
+.nav{
+    background-color: #48e;
+}
+
+.nav_li{
+    display: inline-block;
+    padding: 12px;
+    color: #fff;
+}
+
+.nav_li:hover > a{
+    /*Se modifica la letra*/
+    color: #bbb;
+}
+
+.nav_li:hover{
+    /*Se modifica el icon ya que toma colo como una letra*/
+    color: #bbb;
+}
+
+.nav_li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav i{
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.nav_responsive-button-container{
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    background-color: #69c;
+    margin-top: -64px;
+    z-index: 100;
+}
+
+.nav_responsive-button{
+    padding:  6px 20px;
+    text-align: right;
+    width: 100%;
+    
+}
+
+/*Proceso para que cuando la pantalla llegue a cierta
+cantidad de px en este caso 500px se elimine con display:none;*/
+@media only screen and (max-width: 500px){
+    .nav-ul {
+        display: none;
+    }
+    /*Menu que va a aparecer cuando el otro se vaya*/
+    .nav{
+        height: 37px;
+        width: 100%;
+        background-color: #69c;
+    }
+    .nav_responsive-ul{
+        display: block;
+        position: absolute;
+        width: 100%;
+        margin-top: 37px;
+        padding-top: 27px;
+        height: 37px;
+    }
+
+    .nav_container-li{
+        position: relative;
+        top: 1000px;
+        height: 100vh;
+        /*Funcionquenospermitehacercalculosconlospxqueleretiramos*/background-color: #9bf;
+        transition:all 1s ;
+        z-index:1 ;
+        width: 75%;
+        -webkit-transition:all 1s ;
+        -moz-transition:all 1s ;
+        -ms-transition:all 1s ;
+        -o-transition:all 1s ;
+}
+        .nav_respnsive-li
+{
+    width: 100%;
+    padding: 9px 20px;
+}
+
+    .nav_respnsive-li i{
+        box-sizing: border-box;
+        text-align: center;
+        margin-right: 5px;
+        width: 30px;
+        color: #016;
+    }
+    .nav_respnsive-li a {
+        color: #016;
+        text-decoration: none;
+    }
+
+    .nav_responsive-ul:hover > .nav_container-li{
+        top: -27px;
+
+    }
+}
